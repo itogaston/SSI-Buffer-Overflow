@@ -43,5 +43,5 @@ void login()
 
 int main(int argc, char **argv)
 {
-	funcion();
+	login();
 }

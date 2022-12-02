@@ -9,7 +9,9 @@ void funcionalidad_cool()
 	fflush(0);
 }
 
-void ejecuta()
+void test()  {}
+
+void no_ejecuta()
 {
 	// Esto nunca se ejecuta o no no
 	system("/bin/bash");
@@ -18,7 +20,7 @@ void ejecuta()
 void login()
 {
 
-	char pass[16] = "MakeSantiProud";
+	char pass[16] = "MakeSantiProud!";
 	char userpass[16];
 	int cont = 0;
 
@@ -35,6 +37,7 @@ void login()
 		else
 		{
 			printf("Clave incorrecta\n");
+			test();
 			cont++;
 		}
 		fflush(0);

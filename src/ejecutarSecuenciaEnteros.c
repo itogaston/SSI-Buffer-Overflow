@@ -3,27 +3,28 @@
   VERSION: 1.0.0
   HISTORICO:
   Creado por ArÃ¡nzazu JurÃ­o MunÃ¡rriz el 09/09/19.
-  
+
   Este fichero se crea sÃ³lo con intenciones de coordinaciÃ³n docente y como
   ayuda a sus alumnos y alumnas. La autora desautoriza expresamente su difusiÃ³n, copia
   o exhibiciÃ³n pÃºblica (salvo entre los alumnos de las asignaturas 240301 y 250301 del
   grado en IngenierÃ­a InformÃ¡tica de la UPNA).
 */
 
-#include<stdio.h>
+#include <stdio.h>
 #include "secuenciaEnteros.h"
 
-int main(){
+int main()
+{
 	tipoElementoPila elem;
 	tipoSecuencia sec;
 	int opcion;
-	
-	//la pila izquierda hasta el anterior al punto de interes
-	//la pila derecha desde el punto de interÃ©s
+
+	// la pila izquierda hasta el anterior al punto de interes
+	// la pila derecha desde el punto de interÃ©s
 	nuevaSecuencia(&sec);
 
 	do
-    {
+	{
 		printf("--------MENU-------- \n");
 		printf("1 - Insertar un elemento delante del punto de interes\n");
 		printf("2 - Insertar un elemento en el punto de interes\n");
@@ -34,45 +35,62 @@ int main(){
 		printf("7 - Esta el punto al final?\n");
 		printf("8 - Esta vacia la secuencia?\n");
 		printf("9 - Salir\n");
-		printf("Escoja una opcion: ");
-		scanf("%d",&opcion);
-		switch(opcion){ 
-			case 1: 
-				printf("Introduce el entero: ");
-				scanf("%d",&elem);
-				insertarDelantePunto(&sec,elem);
-				break;
-			case 2: 
-				printf("Introduce el entero: ");
-				scanf("%d",&elem);
-				insertarEnPunto(&sec,elem);
-				break;    
-			case 3: 
-				eliminarEnPunto(&sec);
-				printf("Se ha eliminado un elemento\n");
-				break;
-			case 4:
-				elem=consultarEnPunto(sec);
-				printf("El elemento en el punto de interes es %d\n",elem);
-				break;
-			case 5:
-				avanzarPunto(&sec);
-				break;
-			case 6:
-				moverPuntoAlPrincipio(&sec);
-				break;
-			case 7:
-				if(esPuntoUltimo(sec))
-					printf("El punto de interes esta en el ultimo elemento de la secuencia\n");
-				else
-					printf("El punto de interes no esta al final de la secuencia\n");
-				break;
-			case 8:
-				if(esVaciaSecuencia(sec))
-					printf("La secuencia esta vacia\n");
-				else
-					printf("La secuencia no esta vacia\n");
-				break;
+		printf("Escoja una opcion: \n");
+		scanf("%d", &opcion);
+		switch (opcion)
+		{
+		case 1:
+			printf("Introduce el entero: ");
+			fflush(0);
+			scanf("%d", &elem);
+			insertarDelantePunto(&sec, elem);
+			break;
+		case 2:
+			printf("Introduce el entero: ");
+			fflush(0);
+			scanf("%d", &elem);
+			insertarEnPunto(&sec, elem);
+			break;
+		case 3:
+			eliminarEnPunto(&sec);
+			printf("Se ha eliminado un elemento\n");
+			fflush(0);
+			break;
+		case 4:
+			elem = consultarEnPunto(sec);
+			printf("El elemento en el punto de interes es %d\n", elem);
+			fflush(0);
+			break;
+		case 5:
+			avanzarPunto(&sec);
+			break;
+		case 6:
+			moverPuntoAlPrincipio(&sec);
+			break;
+		case 7:
+			if (esPuntoUltimo(sec))
+			{
+				printf("El punto de interes esta en el ultimo elemento de la secuencia\n");
+				fflush(0);
+			}
+			else
+			{
+				printf("El punto de interes no esta al final de la secuencia\n");
+				fflush(0);
+			}
+			break;
+		case 8:
+			if (esVaciaSecuencia(sec))
+			{
+				printf("La secuencia esta vacia\n");
+				fflush(0);
+			}
+			else
+			{
+				printf("La secuencia no esta vacia\n");
+				fflush(0);
+			}
+			break;
 		}
-	}while(opcion<9);
+	} while (opcion < 9);
 }

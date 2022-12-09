@@ -36,6 +36,7 @@ int main()
 		printf("8 - Esta vacia la secuencia?\n");
 		printf("9 - Salir\n");
 		printf("Escoja una opcion: \n");
+		fflush(0);
 		scanf("%d", &opcion);
 		switch (opcion)
 		{

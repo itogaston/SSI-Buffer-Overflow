@@ -4,12 +4,9 @@
 
 void funcionalidad_cool()
 {
-
 	printf("Esta funcion es super útil\n");
 	fflush(0);
 }
-
-void test()  {}
 
 void no_ejecuta()
 {
@@ -19,7 +16,6 @@ void no_ejecuta()
 
 void login()
 {
-
 	char pass[16] = "MakeSantiProud!";
 	char userpass[16];
 	int cont = 0;
@@ -37,7 +33,6 @@ void login()
 		else
 		{
 			printf("Clave incorrecta\n");
-			test();
 			cont++;
 		}
 		fflush(0);

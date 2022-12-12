@@ -45,7 +45,7 @@ int menu() {
 		case 1:
 			printf("Introduce el elemento: ");
 			getchar();
-			gets(elem);
+			elem = strdup(gets());
 			printf("elem: %s", elem);
 			insertarDelantePunto(&sec, elem);
 			break;

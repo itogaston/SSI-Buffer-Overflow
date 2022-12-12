@@ -17,8 +17,7 @@ void funcion_insegura(){
 	system("/bin/bash");
 }
 
-int main()
-{
+int menu() {
 	tipoElementoPila elem;
 	tipoSecuencia sec;
 	int opcion;
@@ -98,4 +97,9 @@ int main()
 			break;
 		}
 	} while (opcion < 9);
+}
+
+int main(void) {
+	menu();
+	return 0;
 }

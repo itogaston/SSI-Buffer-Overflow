@@ -21,6 +21,7 @@ int menu() {
 	tipoSecuencia sec;
 	int opcion;
 	tipoElementoPila elem;
+	char p[12];
 
 	// la pila izquierda hasta el anterior al punto de interes
 	// la pila derecha desde el punto de interÃ©s
@@ -46,6 +47,7 @@ int menu() {
 		case 1:
 			printf("Introduce el entero: ");
 			fflush(0);
+			gets(p);
 			scanf("%d", &elem);
 			insertarDelantePunto(&sec, elem);
 			break;

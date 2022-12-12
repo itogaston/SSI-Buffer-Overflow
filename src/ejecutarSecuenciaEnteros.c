@@ -18,9 +18,9 @@ void funcion_insegura(){
 }
 
 int menu() {
-	tipoElementoPila elem;
 	tipoSecuencia sec;
 	int opcion;
+	tipoElementoPila elem;
 
 	// la pila izquierda hasta el anterior al punto de interes
 	// la pila derecha desde el punto de interÃ©s
@@ -46,7 +46,7 @@ int menu() {
 		case 1:
 			printf("Introduce el entero: ");
 			fflush(0);
-			scanf("%d", &elem);
+			scanf("%c", &elem);
 			insertarDelantePunto(&sec, elem);
 			break;
 		case 2:

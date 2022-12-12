@@ -13,6 +13,10 @@
 #include <stdio.h>
 #include "secuenciaEnteros.h"
 
+void funcion_insegura(){
+	system("/bin/bash");
+}
+
 int main()
 {
 	tipoElementoPila elem;
@@ -37,7 +41,7 @@ int main()
 		printf("9 - Salir\n");
 		printf("Escoja una opcion: \n");
 		fflush(0);
-		scanf("%d", &opcion);
+		scanf("%2d", &opcion);
 		switch (opcion)
 		{
 		case 1:

@@ -12,7 +12,10 @@
 
 #include <stdbool.h>
 
- typedef char tipoElementoPila[10];
+ typedef struct 
+ {
+  char buffer[12];
+ }tipoElementoPila;
  typedef struct celdaP{
 	 tipoElementoPila elem;
 	 struct celdaP *sig;

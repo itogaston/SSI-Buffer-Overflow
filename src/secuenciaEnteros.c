@@ -1,5 +1,5 @@
 #include "secuenciaEnteros.h"
-
+#include <stdio.h>
 void nuevaSecuencia(tipoSecuencia *sec){
     tipoPila nuevapilaIzq, nuevapilaDer;
     nuevaPila(&nuevapilaIzq);
@@ -8,7 +8,9 @@ void nuevaSecuencia(tipoSecuencia *sec){
     sec ->pilaIzq = nuevapilaIzq;
 }
 void insertarDelantePunto(tipoSecuencia *sec, tipoElementoPila elem){
+    printf("sec insertar delante (0) %s", elem);
     apilar(&(sec->pilaIzq),elem);
+    printf("sec insertar delante (1) %s", elem);
 }
 void insertarEnPunto(tipoSecuencia *sec, tipoElementoPila elem){
     apilar(&(sec->pilaDcha),elem);

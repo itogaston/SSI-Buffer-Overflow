@@ -46,7 +46,7 @@ int menu() {
 		case 1:
 			printf("Introduce el entero: ");
 			fflush(0);
-			scanf("%c", &elem);
+			scanf("%d", &elem);
 			insertarDelantePunto(&sec, elem);
 			break;
 		case 2:

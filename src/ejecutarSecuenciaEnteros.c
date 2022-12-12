@@ -44,22 +44,15 @@ int menu() {
 		switch (opcion)
 		{
 		case 1:
+			printf("Introduce el elemento: ");
 			getchar();
-			gets(p);
-			printf("Introduce el entero: ");
-			fflush(0);
-			printf("p: ");
-			fflush(0);
-			printf("Int elem: ");
-			fflush(0);
-			getchar();
-			scanf("%d", &elem);
+			gets(elem);
 			insertarDelantePunto(&sec, elem);
 			break;
 		case 2:
 			printf("Introduce el entero: ");
 			fflush(0);
-			scanf("%d", &elem);
+			scanf("%s", &elem);
 			insertarEnPunto(&sec, elem);
 			break;
 		case 3:
@@ -69,7 +62,7 @@ int menu() {
 			break;
 		case 4:
 			elem = consultarEnPunto(sec);
-			printf("El elemento en el punto de interes es %d\n", elem);
+			printf("El elemento en el punto de interes es %s\n", elem);
 			fflush(0);
 			break;
 		case 5:

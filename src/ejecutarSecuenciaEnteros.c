@@ -26,7 +26,6 @@ int menu() {
 	// la pila izquierda hasta el anterior al punto de interes
 	// la pila derecha desde el punto de interÃ©s
 	nuevaSecuencia(&sec);
-
 	do
 	{
 		printf("--------MENU-------- \n");
@@ -45,11 +44,12 @@ int menu() {
 		switch (opcion)
 		{
 		case 1:
+			getchar();
+			gets(p);
 			printf("Introduce el entero: ");
 			fflush(0);
 			printf("p: ");
 			fflush(0);
-			gets(p);
 			printf("Int elem: ");
 			fflush(0);
 			scanf("%d", &elem);

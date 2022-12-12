@@ -52,6 +52,7 @@ int menu() {
 			fflush(0);
 			printf("Int elem: ");
 			fflush(0);
+			getchar();
 			scanf("%d", &elem);
 			insertarDelantePunto(&sec, elem);
 			break;

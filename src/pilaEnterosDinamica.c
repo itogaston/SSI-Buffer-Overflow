@@ -16,6 +16,7 @@
 #include <stdlib.h>
 
 
+
 void nuevaPila(tipoPila *p){
 	*p=NULL;
 }
@@ -27,7 +28,7 @@ void errorPila(char s[]){
 void apilar(tipoPila *p, tipoElementoPila elemento){
 	celdaPila *nuevo;
 	nuevo=(celdaPila*)malloc(sizeof(celdaPila));
-	nuevo->elem=elemento;
+	nuevo->elem=strdup(elemento);
 	nuevo->sig=*p;
 	*p=nuevo;
 }

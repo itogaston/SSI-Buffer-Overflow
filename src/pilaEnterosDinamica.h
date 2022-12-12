@@ -9,17 +9,14 @@
   o exhibiciÃ³n pÃºblica (salvo entre los alumnos de las asignaturas 240301 y 250301 del
   grado en IngenierÃ­a InformÃ¡tica de la UPNA).
 */
-
+#include <string.h>
 #include <stdbool.h>
 
- typedef struct 
- {
-  char buffer[12];
- }tipoElementoPila;
- typedef struct celdaP{
-	 tipoElementoPila elem;
-	 struct celdaP *sig;
- } celdaPila; 
+typedef char* tipoElementoPila;
+typedef struct celdaP{
+  tipoElementoPila elem;
+  struct celdaP *sig;
+} celdaPila; 
 typedef celdaPila* tipoPila;
 
 void nuevaPila(tipoPila *);

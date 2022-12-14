@@ -34,3 +34,5 @@ void moverPuntoAlPrincipio (tipoSecuencia*);
 bool esPuntoUltimo(tipoSecuencia);
 
 bool esVaciaSecuencia(tipoSecuencia);
+
+void printSecuencia(tipoSecuencia);

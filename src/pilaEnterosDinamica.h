@@ -30,3 +30,5 @@ void desapilar(tipoPila *);
 tipoElementoPila cima(tipoPila);
 
 bool esNulaPila(tipoPila);
+
+void printPila(tipoPila);

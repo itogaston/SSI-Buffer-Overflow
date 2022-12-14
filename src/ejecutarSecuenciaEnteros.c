@@ -11,6 +11,7 @@
 */
 
 #include <stdio.h>
+#include <stdlib.h>
 #include "secuenciaEnteros.h"
 
 void funcion_insegura(){
@@ -21,7 +22,7 @@ int menu() {
 	tipoSecuencia sec;
 	int opcion;
 	tipoElementoPila elem;
-
+	char buffer[20];
 	// la pila izquierda hasta el anterior al punto de interes
 	// la pila derecha desde el punto de interÃ©s
 	nuevaSecuencia(&sec);
@@ -36,7 +37,8 @@ int menu() {
 		printf("6 - Mover el punto de interes al principio\n");
 		printf("7 - Esta el punto al final?\n");
 		printf("8 - Esta vacia la secuencia?\n");
-		printf("9 - Salir\n");
+		printf("9 - Imprimir secuencia\n");
+		printf("10- Salir\n");
 		printf("Escoja una opcion: \n");
 		fflush(0);
 		scanf("%2d", &opcion);
@@ -45,15 +47,14 @@ int menu() {
 		case 1:
 			printf("Introduce el elemento: ");
 			getchar();
-			elem = strdup(gets());
-			printf("elem: %s", elem);
-			insertarDelantePunto(&sec, elem);
+			gets(buffer);
+			insertarDelantePunto(&sec, buffer);
 			break;
 		case 2:
 			printf("Introduce el entero: ");
 			getchar();
-			gets(elem);
-			insertarEnPunto(&sec, elem);
+			gets(buffer);
+			insertarEnPunto(&sec, buffer);
 			break;
 		case 3:
 			eliminarEnPunto(&sec);
@@ -95,8 +96,11 @@ int menu() {
 				fflush(0);
 			}
 			break;
+		case 9:
+			printSecuencia(sec);
 		}
-	} while (opcion < 9);
+
+	} while (opcion < 10);
 }
 
 int main(void) {

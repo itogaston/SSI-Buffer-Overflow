@@ -16,7 +16,6 @@
 #include <stdlib.h>
 
 
-
 void nuevaPila(tipoPila *p){
 	*p=NULL;
 }
@@ -56,4 +55,18 @@ tipoElementoPila cima(tipoPila p){
 
 bool esNulaPila(tipoPila p){
 	return p==NULL;
+}
+
+void printPila(tipoPila p) {
+	if (esNulaPila(p)){
+		return ;
+	}
+	int count = 0;
+	tipoPila tmp = p;
+	while (tmp != NULL)
+	{
+		printf("%s ", tmp->elem);
+		tmp = tmp->sig;
+		count++;		
+	}
 }

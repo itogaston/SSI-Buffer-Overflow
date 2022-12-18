@@ -1,15 +1,3 @@
-/*
-  FICHERO: ejecutarSecuenciaEnteros.c
-  VERSION: 1.0.0
-  HISTORICO:
-  Creado por ArÃ¡nzazu JurÃ­o MunÃ¡rriz el 09/09/19.
-
-  Este fichero se crea sÃ³lo con intenciones de coordinaciÃ³n docente y como
-  ayuda a sus alumnos y alumnas. La autora desautoriza expresamente su difusiÃ³n, copia
-  o exhibiciÃ³n pÃºblica (salvo entre los alumnos de las asignaturas 240301 y 250301 del
-  grado en IngenierÃ­a InformÃ¡tica de la UPNA).
-*/
-
 #include <stdio.h>
 #include <stdlib.h>
 #include "secuenciaEnteros.h"
@@ -22,7 +10,7 @@ int menu() {
 	tipoSecuencia sec;
 	int opcion;
 	tipoElementoPila elem;
-	char buffer[20];
+	char buffer[12];
 	// la pila izquierda hasta el anterior al punto de interes
 	// la pila derecha desde el punto de interÃ©s
 	nuevaSecuencia(&sec);
